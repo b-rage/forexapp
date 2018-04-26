@@ -1,4 +1,5 @@
 import React from 'react';
+import GbpjpyComp from './GbpjpyComp';
 
 class CurrencyContainer extends React.Component {
 
@@ -7,8 +8,7 @@ class CurrencyContainer extends React.Component {
         return (
 
             <div>
-                <h1>GBP/JPY</h1>
-                <p>152.462</p>
+                <GbpjpyComp/>
             </div>
         )
     }
