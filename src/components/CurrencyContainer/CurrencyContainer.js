@@ -1,6 +1,6 @@
 import React from 'react';
 import GbpjpyComp from './GbpjpyComp';
-import data from './GbpjpyComp';
+
 
 class CurrencyContainer extends React.Component {
 
@@ -9,7 +9,7 @@ class CurrencyContainer extends React.Component {
         return (
 
             <div>
-                <GbpjpyComp data={data}/>
+                <GbpjpyComp />
             </div>
         )
     }

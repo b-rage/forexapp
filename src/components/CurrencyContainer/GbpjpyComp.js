@@ -7,7 +7,8 @@ class GbpjpyComp extends React.Component {
 
         super();
         this.state = {
-            data:{},
+            data:[],
+            
         }
     }
     
@@ -16,12 +17,12 @@ class GbpjpyComp extends React.Component {
     https://facebook.github.io/react-native/movies.json
     */
     componentDidMount(){
-        fetch('https://facebook.github.io/react-native/movies.json')
+        fetch('https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=GBPJPY&interval=1min&apikey=GJC4XIF6AGB9ROW7')
         .then((response)=>response.json())
         .then((responseJson)=>{
             
             this.setState({
-                data: responseJson.movies[0] //data: responseJson.movies[0]
+                data: responseJson["Time Series (1min)"]["2018-04-27 04:16:00"]["4. close"]  //data: responseJson.movies[0]
             })
         
             console.log(responseJson);   
@@ -39,9 +40,11 @@ class GbpjpyComp extends React.Component {
             <h1>GBP/JPY</h1>
             {
                     
-                    <div >{this.state.data.title}</div>
+                    
+                    <div >{this.state.data}</div>            //<div >{this.state.data.title}</div>
 
-                    /* this.state.data.map( (dynamicData,key)=>
+                    /*
+                    this.state.data.map( (dynamicData,key)=>
                     <div key={key}>{dynamicData.title}</div>) */
                     
             }
