@@ -1,4 +1,11 @@
-/* ul#listDo li {
-    padding-bottom: 15px;
-    padding-left: 15px;
-} */
+ul#listDo li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 27px;
+    color: #26a69a;
+} 
+
+#deleteBtn {
+    background-color: tomato;
+    position: relative;
+    left: 10px;
+}
